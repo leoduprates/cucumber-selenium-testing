@@ -1,18 +1,22 @@
 job('selenium-cucumber-js') {
     scm {
-        git('https://github.com/leoduprates/sample-selenium-cucumber-js') {  node -> // is hudson.plugins.git.GitSCM
+        git('https://github.com/leoduprates/sample-selenium-cucumber-js') {  node ->
             node / gitConfigName('DSL User')
-            node / gitConfigEmail('jenkins-dsl@xpto.training')
+            node / gitConfigEmail('jenkinsdsl@training.xpto')
         }
     }
     triggers {
         scm('H/5 * * * *')
     }
     wrappers {
-        nodejs('nodejs') // this is the name of the NodeJS installation in 
-                         // Manage Jenkins -> Configure Tools -> NodeJS Installations -> Name
+        nodejs('nodejs')
     }
     steps {
         shell("npm install")
+    }
+    archiveArtifacts {
+            pattern('**')
+            onlyIfSuccessful()
+        }
     }
 }
