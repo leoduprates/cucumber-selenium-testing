@@ -1,6 +1,9 @@
 job('selenium-cucumber-js') {
     scm {
-        git('https://github.com/leoduprates/sample-selenium-cucumber-js') 
+        git('https://github.com/leoduprates/sample-selenium-cucumber-js') {  node -> // is hudson.plugins.git.GitSCM
+            node / gitConfigName('DSL User')
+            node / gitConfigEmail('jenkins-dsl@xpto.training')
+        }
     }
     triggers {
         scm('H/5 * * * *')
