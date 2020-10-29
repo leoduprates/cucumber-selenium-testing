@@ -14,8 +14,10 @@ job('selenium-cucumber-js') {
     steps {
         shell("npm install")
     }
-    archiveArtifacts {
-        pattern('**')
-        onlyIfSuccessful()
+    publishers {
+        archiveArtifacts {
+            pattern('**')
+            onlyIfSuccessful()
+        }
     }
 }
