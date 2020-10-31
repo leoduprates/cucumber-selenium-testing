@@ -7,9 +7,9 @@ const ProductPage = require('../page_objects/productPage');
 const home = new HomePage();
 const product = new ProductPage();
 
-When(/^I search the product (.*)$/, function (value) {
-    this.driver.findElement(home.queryText).sendKeys(value);
-    this.driver.findElement(home.searchButton).click();
+When(/^I search the product (.*)$/, async function (value) {
+    await this.driver.findElement(home.queryText).sendKeys(value);
+    await this.driver.findElement(home.searchButton).click();
 });
 
 Then(/^I see the product with title (.*)$/, async function (title) {

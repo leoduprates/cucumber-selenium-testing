@@ -11,8 +11,8 @@ function CustomWorld() {
     chromeCapabilities.set('chromeOptions', chromeOptions);
 
     this.driver = new webdriver.Builder()
+        .usingServer('http://127.0.0.1:4444/wd/hub')
         .withCapabilities(chromeCapabilities)
-        .usingServer('http://172.18.0.2:4444/wd/hub')
         .build();
 
     this.driver.manage().setTimeouts({
@@ -21,7 +21,6 @@ function CustomWorld() {
         script: 60000
     });
 
-    this.driver.manage().window().maximize();
 }
 
 setDefaultTimeout(60 * 1000);
