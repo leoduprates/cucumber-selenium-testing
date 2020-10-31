@@ -11,7 +11,7 @@ function CustomWorld() {
     chromeCapabilities.set('chromeOptions', chromeOptions);
 
     this.driver = new webdriver.Builder()
-        .usingServer('http://127.0.0.1:4444/wd/hub')
+        .usingServer('http://selenium-hub:4444/wd/hub')
         .withCapabilities(chromeCapabilities)
         .build();
 
