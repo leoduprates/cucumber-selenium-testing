@@ -12,7 +12,7 @@ function CustomWorld() {
 
     this.driver = new webdriver.Builder()
         .withCapabilities(chromeCapabilities)
-        .usingServer('http://172.18.0.3:4444/wd/hub')
+        .usingServer('http://172.18.0.2:4444/wd/hub')
         .build();
 
     this.driver.manage().setTimeouts({
