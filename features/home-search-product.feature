@@ -1,3 +1,4 @@
+@home
 Feature: Home - Search a product
 
     Scenario: Search a product

@@ -4,13 +4,14 @@
   "description": "Test automation project using Javascript, Selenium and Cucumber to automatize web applications.",
   "main": "index.js",
   "scripts": {
-    "test": "cucumber-js"
+    "test": "cucumber-js && node -e \"require('./support/report')()\""
   },
   "author": "leoduprates",
   "license": "ISC",
   "dependencies": {
     "chai": "^4.2.0",
     "cucumber": "^7.0.0-rc.0",
+    "cucumber-html-reporter": "^5.2.0",
     "selenium-webdriver": "^4.0.0-alpha.7"
   }
 }

@@ -1,4 +1,8 @@
 ### Node ###
+# Reports
+reports/*.json
+reports/*.html
+
 # Logs
 logs
 *.log
