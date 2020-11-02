@@ -1,4 +1,4 @@
-@home
+@home @search @regression
 Feature: Home - Search a product
 
     Scenario: Search a product

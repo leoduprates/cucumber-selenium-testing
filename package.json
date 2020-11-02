@@ -4,7 +4,8 @@
   "description": "Test automation project using Javascript, Selenium and Cucumber to automatize web applications.",
   "main": "index.js",
   "scripts": {
-    "test": "cucumber-js && node -e \"require('./support/report')()\""
+    "test": "cucumber-js",
+    "report": "node ./core/report.js"
   },
   "author": "leoduprates",
   "license": "ISC",
