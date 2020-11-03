@@ -8,4 +8,5 @@ Given(/^I open (.*)$/, async function (url) {
 
 Given(/^I close the browser$/, async function () {
     await this.driver.close();
+    await this.driver.quit();
 });
