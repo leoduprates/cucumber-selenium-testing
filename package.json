@@ -4,7 +4,7 @@
   "description": "Test automation project using Javascript, Selenium and Cucumber to automatize web applications.",
   "main": "index.js",
   "scripts": {
-    "test": "cucumber-js",
+    "test": "./node_modules/.bin/cucumber-js",
     "report": "node ./core/report.js"
   },
   "author": "leoduprates",
