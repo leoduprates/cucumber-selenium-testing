@@ -1,13 +1,15 @@
 const selenium = require('selenium-webdriver');
 
-const chrome = function () {
+const chrome = () => {
     const driver = new selenium.Builder()
         .withCapabilities({
             browserName: 'chrome',
             chromeOptions: {
-                args: ['--disable-gpu',
+                args: [
+                    '--disable-gpu',
                     '--no-sandbox',
-                    '--disable-extensions']
+                    '--disable-extensions'
+                ]
             }
         });
 
@@ -18,8 +20,8 @@ const chrome = function () {
     return driver.build();
 };
 
-const firefox = function () {
-    var driver = new selenium.Builder()
+const firefox = () => {
+    const driver = new selenium.Builder()
         .withCapabilities({
             browserName: 'firefox',
         });
@@ -31,7 +33,7 @@ const firefox = function () {
     return driver.build();
 }
 
-const browser = function() {
+const browser = () => {
     switch (process.env.BROWSER) {
         case 'chrome':
             return chrome();

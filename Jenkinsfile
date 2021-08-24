@@ -13,9 +13,6 @@ node {
     }
   }
   stage('Report') {
-    nodejs(nodeJSInstallationName: 'nodejs') {
-      sh 'npm run report'
-    }
     publishHTML (target : [
       allowMissing: false,
       alwaysLinkToLastBuild: true,

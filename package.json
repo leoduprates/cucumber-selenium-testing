@@ -4,15 +4,15 @@
   "description": "Test automation project using Javascript, Selenium and Cucumber to automatize web applications.",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/.bin/cucumber-js",
+    "test": "./node_modules/@cucumber/cucumber/bin/cucumber-js",
     "report": "node ./core/report.js"
   },
   "author": "leoduprates",
   "license": "ISC",
   "dependencies": {
+    "@cucumber/cucumber": "^7.3.1",
+    "@cucumber/pretty-formatter": "^1.0.0-alpha.1",
     "chai": "^4.2.0",
-    "cucumber": "^7.0.0-rc.0",
-    "cucumber-html-reporter": "^5.2.0",
     "selenium-webdriver": "^4.0.0-alpha.7"
   }
 }
